@@ -1,9 +1,9 @@
 const concesionaria = require('./concesionaria');
+const process = require('process');
 
-
-switch (comando) {
-    case value:
-        
+switch (process.argv[2].toLowerCase()) {
+    case 'buscar':
+        console.log(concesionaria.buscarAuto(process.argv[3]))
         break;
 
     default:
