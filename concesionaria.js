@@ -17,6 +17,9 @@ const autosModificados = this.autos.map(auto => {
    })
    guardarCambios(autosModificados)
    return "Cambios guardados exitosamente"
-}
+},
+autosParaLaVenta : function(){
+   return this.autos.filter(auto => !auto.vendido)
+},
 }
 module.exports = concesionaria
