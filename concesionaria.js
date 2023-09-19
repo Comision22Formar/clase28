@@ -7,6 +7,16 @@ const concesionaria = {
    buscarAuto : function (patente) {
       return this.autos.find(auto => auto.patente === patente) || null
 },
-};
+venderAuto: function (patente) {
 
+const autosModificados = this.autos.map(auto => {
+   if(auto.patente === patente){
+         auto.vendido = true
+   }
+   return auto
+   })
+   guardarCambios(autosModificados)
+   return "Cambios guardados exitosamente"
+}
+}
 module.exports = concesionaria
